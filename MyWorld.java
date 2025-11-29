@@ -12,7 +12,7 @@ public class MyWorld extends World {
         addObject(elephant, 300, 300);
         spawnApple();
         
-        Label scoreLabel = new Label(0, 80);
+        scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 20, 30);
     }
     
