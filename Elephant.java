@@ -12,9 +12,18 @@ public class Elephant extends Actor
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    String facing = "right";
     public void act()
     {
         // Add your action code here.
-        move(1);
+        int dx = 4;
+        int dy = getY() + 2;
+        int x = getX();
+        if(Greenfoot.isKeyDown("left"))
+        {
+            dx = -dx;
+            move(dx);
+            facing = "left";
+        }
     }
 }
