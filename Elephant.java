@@ -36,5 +36,16 @@ public class Elephant extends Actor
         {
             setLocation(0, dy);
         }
+        eat();
+    }
+    
+    public void eat()
+    {
+        if(isTouching(Apple.class))
+        {
+            removeTouching(null);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnApple();
+        }
     }
 }
